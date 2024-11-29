@@ -1,0 +1,266 @@
+@charset "UTF-8";
+@font-face {
+  font-family: "Principal";
+  src: url("texgyretermes-regular.otf");
+}
+@font-face {
+  font-family: "Secundaria";
+  src: url("Poppins-Regular.ttf") format("truetype");
+}
+
+/* Linea para modificar la ubicaciòn del tìtulo entre 819 y 1500 */
+
+.slider-section {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background-color: #150f10;
+  padding-bottom: 40px;
+  box-sizing: border-box;
+}
+
+.contenedorcontenedor {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  display: hidden;
+  max-height: 100vh;
+}
+
+.titletitle {
+  font-family: "Principal";
+  font-size: 4rem;
+  margin-bottom: 40px;
+  margin-top: 20px;
+  color: white;
+}
+.titletitle::after {
+  content: "";
+  display: block;
+  width: 100%; /* Ajusta el ancho de la línea */
+  height: 4px; /* Ajusta el grosor de la línea */
+  background-color: #58a9db; /* Color de la línea */
+  /* Espaciado alrededor de la línea */
+}
+
+.sliderslider {
+  flex-grow: 1;
+  max-width: 100%;
+  margin: auto;
+  margin: 0 auto;
+  overflow: hidden;
+  position: relative;
+  padding-inline: 2rem;
+  height: 80vh;
+}
+
+.slideslide {
+  border: 4px solid #737373; /* Borde de color #d9d9d9 */
+  box-sizing: border-box;
+  text-align: center;
+  width: 100%;
+  height: 100%; /* Asegura que el slide cubra toda la altura */
+  position: relative;
+  /* Asegura que el borde esté incluido en las dimensiones del contenedor */
+}
+.slideslide img {
+  position: relative;
+  width: 100%;
+  height: 100%; /* Asegura que la imagen cubra toda la altura */
+  -o-object-fit: cover;
+     object-fit: cover; /* Cubre todo el contenedor sin distorsionar la imagen */
+}
+.slideslide .slidetislideti {
+  text-transform: uppercase;
+  letter-spacing: 5px;
+  position: absolute;
+  top: 10px; /* Espaciado desde la parte superior */
+  left: 50%;
+  transform: translateX(-50%);
+  font-family: "Secundaria";
+  font-size: 35px; /* Aumentar el tamaño del texto */
+  color: #fff; /* Color blanco */
+  text-align: center; /* Centrado del texto */
+  text-shadow: 4px 4px 6px #150f10; /* Agregar sombra al texto */
+  box-sizing: border-box; /* Incluye el padding en el tamaño total de la caja */
+  border-radius: 30px; /* Esquinas redondeadas */
+}
+
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%; /* Centrado verticalmente */
+  width: 40px; /* Ancho del botón */
+  height: 40px; /* Alto del botón */
+  background-color: #150f10; /* Color de fondo igual al fondo de la página */
+  border: 2px solid #808080; /* Borde gris */
+  border-radius: 50%; /* Botones redondeados */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transform: translateY(-50%);
+  transition: opacity 0.3s ease; /* Transición suave al hacer hover */
+  opacity: 0.7; /* Botón opaco por defecto */
+}
+.prev:hover, .next:hover {
+  opacity: 1; /* Botón más visible al hacer hover */
+}
+
+.prev::before, .next::before {
+  content: ""; /* Flecha usando borde */
+  display: block;
+  width: 10px;
+  height: 10px;
+  border: solid #00bfff; /* Color de la flecha celeste */
+  border-width: 0 3px 3px 0;
+  padding: 5px;
+}
+
+.prev::before {
+  transform: rotate(135deg); /* Flecha hacia la izquierda */
+}
+
+.next::before {
+  transform: rotate(-45deg); /* Flecha hacia la derecha */
+}
+
+.next {
+  right: 5px; /* A 5px del borde derecho */
+}
+
+.prev {
+  left: 5px; /* A 5px del borde izquierdo */
+}
+
+@media screen and (max-width: 600px) {
+  .titletitle {
+    font-size: 40px;
+  }
+  .slidetislideti {
+    font-size: 16px;
+  }
+  .prev, .next {
+    font-size: 14px;
+  }
+}
+.indicators {
+  position: absolute;
+  bottom: 10px; /* Posición desde el fondo */
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  justify-content: center;
+  gap: 10px; /* Espacio entre los indicadores */
+}
+.indicators .indicator {
+  width: 20px;
+  height: 4px;
+  background-color: #00bfff; /* Color celeste */
+  opacity: 0.5; /* Transparencia */
+  transition: opacity 0.3s ease; /* Transición suave */
+}
+.indicators .indicator.active {
+  opacity: 1; /* Indicador activo */
+}/*# sourceMappingURL=editar.css.map */
+
+
+@media (min-width: 700px) and (max-width: 805px) {
+  /* Aumentamos la especificidad para apuntar al logo */
+  #sec-23b3 .u-layout-cell.u-size-20 .u-container-layout.u-container-layout-1 .u-image.u-image-1 {
+      position: absolute !important; /* Si prefieres absoluto, puedes cambiar a absolute */
+      width: 300px !important; /* Cambia el tamaño del logo */
+      height: auto !important; /* Ajusta la altura automáticamente */
+      transform: translate(-20px, -230px) !important; /* Mueve el logo 10px a la derecha y hacia abajo */
+
+  }
+}
+
+
+
+@media (min-width: 700px) {
+    /* Asegúrate de que el contenedor esté usando Flexbox para centrar el título */
+    #sec-23b3 .u-layout-cell.u-size-20 .u-container-layout.u-container-layout-2 {
+        display: flex !important;
+        justify-content: center !important;
+        align-items: center !important;
+        padding: 0 !important; /* Elimina padding si es necesario */
+    }
+
+    /* Ajusta el título para que esté centrado correctamente */
+    #sec-23b3 .u-layout-cell.u-size-20 .u-container-layout.u-container-layout-2 h1.u-text-1 {
+        text-align: center !important;
+        margin: 0 auto !important;
+        padding: 0 !important; /* Asegura que no haya padding no deseado */
+        font-size: 45px !important; /* Cambia el tamaño del texto aquí */
+
+    }
+
+
+}
+
+@media (min-width: 800px) and (max-width: 800px) and (min-height: 1280px) and (max-height: 1280px) {
+  /* Asegura que el hero tenga la altura y alineación deseada */
+  #sec-23b3 {
+      height: 100vh; /* Ajusta el hero para que ocupe toda la pantalla */
+      display: flex;
+      justify-content: center;  /* Centra horizontalmente */
+      align-items: center;      /* Centra verticalmente */
+      background-size: cover;   /* Asegura que la imagen de fondo cubra toda la sección */
+      position: relative;
+  }
+
+  /* Cambiar el tamaño y alineación del logo */
+  #sec-23b3 .u-layout-cell.u-size-20 .u-container-layout.u-container-layout-1 .u-image.u-image-1 {
+      width: 300px !important; /* Ajusta el tamaño del logo */
+      height: auto !important;
+      transform: translate(-80px, 0px) !important; /* Mueve el logo 10px a la derecha y hacia abajo */
+    }
+
+  /* Cambiar el tamaño y alineación del título */
+  #sec-23b3 .u-layout-cell.u-size-20 .u-container-layout.u-container-layout-2 h1.u-text-1 {
+      font-size: 80px !important; /* Ajusta el tamaño del título */
+      text-align: center !important; /* Centra el título */
+      color: #ffffff !important; /* Cambia el color del título */
+      transform: translate(0px, 300px) !important; 
+  }
+}
+
+@media (min-width: 800px) and (max-width: 800px) and (min-height: 1280px) and (max-height: 1280px) {
+  /* Mostrar el menú completo */
+  .u-nav-container {
+    display: block !important; /* Oculta el menú hamburguesa */
+    transform: translate(100px, 70px) !important; /* Mueve el menú completo 20px a la derecha */
+
+  }
+
+}
+
+@media (min-width: 800px) and (max-width: 800px) and (min-height: 1280px) and (max-height: 1280px) {
+  /* Asegúrate de que la sección (hero) ocupe toda la altura disponible */
+  #sec-23b3 {
+      height: 100vh !important; /* Hero ocupa toda la altura de la ventana */
+      display: flex;
+      justify-content: center;
+      align-items: center;
+  }
+
+  /* Asegúrate de que el contenedor padre del título ocupe toda la altura */
+  #sec-23b3 .u-layout-cell.u-size-20 {
+      height: 100% !important; /* El contenedor de la celda ocupa el 100% de la altura */
+  }
+
+  /* Usa flexbox para centrar el título dentro de su contenedor */
+  #sec-23b3 .u-layout-cell.u-size-20 .u-container-layout.u-container-layout-2 {
+      display: flex !important;
+      justify-content: center !important; /* Centra horizontalmente */
+      align-items: center !important;    /* Centra verticalmente */
+      height: 100% !important; /* El contenedor del título ocupa toda la altura */
+  }
+
+  /* Ajusta el texto del título */
+  #sec-23b3 .u-layout-cell.u-size-20 .u-container-layout.u-container-layout-2 h1.u-text-1 {
+      text-align: center !important;
+      margin: 0 auto !important; /* Elimina márgenes innecesarios */
+      font-size: 40px !important; /* Ajusta el tamaño del título */
+  }
+}

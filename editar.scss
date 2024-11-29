@@ -1,0 +1,175 @@
+@font-face {
+  font-family: 'Principal';
+  src: url('texgyretermes-regular.otf');
+}
+@font-face {
+  font-family: 'Secundaria';
+  src: url('Poppins-Regular.ttf') format('truetype');
+  
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background-color: #150f10;
+}
+
+
+
+.contenedor {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  display: hidden;
+  //padding: 20px;
+  //height: 100vh;
+  max-height: 100vh;
+}
+
+.section-title {
+  font-family: 'Principal';
+  font-size: 4rem;
+  margin-bottom: 40px;
+  margin-top: 20px;
+  color: #ffff;
+  &::after {
+    content: '';
+    display: block;
+    width: 100%; /* Ajusta el ancho de la línea */
+    height: 4px; /* Ajusta el grosor de la línea */
+    background-color: #58a9db; /* Color de la línea */
+     /* Espaciado alrededor de la línea */
+}
+}
+.slider {
+  flex-grow: 1;
+  max-width: 100%;
+  margin: auto;
+ margin: 0 auto;
+  overflow: hidden;
+  position: relative;
+  padding-inline: 2rem;
+  height: 80vh;
+ 
+}
+
+
+.slide {
+   border: 4px solid #737373; /* Borde de color #d9d9d9 */
+  box-sizing: border-box;
+  text-align: center;
+  width: 100%;
+  height: 100%; /* Asegura que el slide cubra toda la altura */
+  position: relative;
+   /* Asegura que el borde esté incluido en las dimensiones del contenedor */
+
+  img {
+
+      position: relative;
+      width: 100%;
+      height: 100%; /* Asegura que la imagen cubra toda la altura */
+      object-fit: cover; /* Cubre todo el contenedor sin distorsionar la imagen */
+  }
+
+
+  .slide-title {
+    text-transform: uppercase;
+      letter-spacing: 5px;
+      position: absolute;
+      top: 10px; /* Espaciado desde la parte superior */
+      left: 50%;
+      transform: translateX(-50%);
+      font-family: 'Secundaria';
+      font-size: 35px; /* Aumentar el tamaño del texto */
+      color: #fff; /* Color blanco */
+      text-align: center; /* Centrado del texto */
+      text-shadow: 4px 4px 6px #150f10; /* Agregar sombra al texto */
+
+      box-sizing: border-box; /* Incluye el padding en el tamaño total de la caja */
+      border-radius: 30px; /* Esquinas redondeadas */
+  }
+}
+
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%; /* Centrado verticalmente */
+  width: 40px; /* Ancho del botón */
+  height: 40px; /* Alto del botón */
+  background-color: #150f10; /* Color de fondo igual al fondo de la página */
+  border: 2px solid #808080; /* Borde gris */
+  border-radius: 50%; /* Botones redondeados */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transform: translateY(-50%);
+  transition: opacity 0.3s ease; /* Transición suave al hacer hover */
+  opacity: 0.7; /* Botón opaco por defecto */
+  
+  &:hover {
+      opacity: 1; /* Botón más visible al hacer hover */
+  }
+}
+
+.prev::before, .next::before {
+  content: ''; /* Flecha usando borde */
+  display: block;
+  width: 10px;
+  height: 10px;
+  border: solid #00bfff; /* Color de la flecha celeste */
+  border-width: 0 3px 3px 0;
+  padding: 5px;
+}
+
+.prev::before {
+  transform: rotate(135deg); /* Flecha hacia la izquierda */
+}
+
+.next::before {
+  transform: rotate(-45deg); /* Flecha hacia la derecha */
+}
+
+.next {
+  right: 5px; /* A 5px del borde derecho */
+}
+
+.prev {
+  left: 5px; /* A 5px del borde izquierdo */
+}
+@media screen and (max-width: 600px) {
+  .section-title {
+      font-size: 40px;
+  }
+
+  .slide-title {
+      font-size: 16px;
+  }
+
+  .prev, .next {
+      font-size: 14px;
+  }
+}
+
+.indicators {
+  position: absolute;
+  bottom: 10px; /* Posición desde el fondo */
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  justify-content: center;
+  gap: 10px; /* Espacio entre los indicadores */
+
+  .indicator {
+      width: 20px;
+      height: 4px;
+      background-color: #00bfff; /* Color celeste */
+      opacity: 0.5; /* Transparencia */
+      transition: opacity 0.3s ease; /* Transición suave */
+
+      &.active {
+          opacity: 1; /* Indicador activo */
+      }
+  }
+
+}

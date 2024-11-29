@@ -1,0 +1,48 @@
+ .u-section-1 {
+  background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('images/buenos_aires.jpg');
+  background-position: 50% 50%, 50% 0%;
+  background-size: cover, cover;
+  min-height: 2160px;
+}
+
+.u-section-1 .u-text-1 {
+  font-family: Arizonia;
+  font-size: 12.5rem;
+  margin: 60px auto;
+}
+
+@media (max-width: 1199px) {
+   .u-section-1 {
+    min-height: 529px;
+  }
+
+  .u-section-1 .u-text-1 {
+    font-size: 4.5rem;
+  }
+}
+
+@media (max-width: 991px) {
+   .u-section-1 {
+    min-height: 405px;
+  }
+}
+
+@media (max-width: 767px) {
+   .u-section-1 {
+    min-height: 304px;
+  }
+
+  .u-section-1 .u-text-1 {
+    font-size: 3.75rem;
+  }
+}
+
+@media (max-width: 575px) {
+   .u-section-1 {
+    min-height: 191px;
+  }
+
+  .u-section-1 .u-text-1 {
+    font-size: 3rem;
+  }
+}
